@@ -12,8 +12,8 @@ router = APIRouter(prefix="/api/ai", tags=["AI Background Removal & Product Stud
 
 # نماذج التحقق لعزل الخلفية الذكي (Pydantic Request Schemas)
 class RemoveBgRequest(BaseImageRequest):
-    model: Literal["u2net", "isnet-general-use", "u2net_human_seg"] = Field(
-        "u2net", description="نموذج الماتينغ العصبي: u2net عام أو isnet أعلى دقة أو u2net_human_seg للبشر"
+    model: Literal["u2netp", "u2net", "isnet-general-use", "u2net_human_seg"] = Field(
+        "u2netp", description="نموذج الماتينغ العصبي: u2netp فائق السرعة (Turbo)، u2net عام، isnet أعلى دقة، u2net_human_seg للبشر"
     )
     matting_threshold: float = Field(
         0.0, ge=0.0, le=0.95, description="عتبة صقل قناع الألفا (0 = هوية، الزيادة تنظف بقايا الهالة)"
@@ -22,8 +22,8 @@ class RemoveBgRequest(BaseImageRequest):
     fg_threshold: int = Field(240, ge=0, le=255, description="عتبة القطعية الأمامية في الماتينغ")
     bg_threshold: int = Field(10, ge=0, le=255, description="عتبة القطعية الخلفية في الماتينغ")
     erode_size: int = Field(10, ge=0, le=30, description="حجم تآكل حدود الماتينغ")
-    refine_grabcut: bool = Field(True, description="صقل إحصائي تفاعلي بـ GrabCut مُهيأ من قناع الشبكة")
-    grabcut_iter: int = Field(3, ge=1, le=10, description="عدد تكرارات GrabCut")
+    refine_grabcut: bool = Field(False, description="صقل إحصائي تفاعلي بـ GrabCut مُهيأ من قناع الشبكة (اختياري)")
+    grabcut_iter: int = Field(2, ge=1, le=10, description="عدد تكرارات GrabCut")
 
 
 class CompositeProductRequest(BaseImageRequest):

@@ -1,10 +1,19 @@
 import time
+import threading
+from contextlib import asynccontextmanager
 from fastapi import FastAPI
 from fastapi.middleware.cors import CORSMiddleware
 from routers.pixel_ops import router as pixel_router
 from routers.spatial_ops import router as spatial_router
 from routers.ai_ops import router as ai_router
 from routers.final_ops import router as final_router
+from services.dip_service import DIPService
+
+@asynccontextmanager
+async def lifespan(app: FastAPI):
+    # تحمية نماذج الذكاء الاصطناعي في خيط خلفي فوري لتكون الاستجابة صفر تأخير من أول نقرة
+    threading.Thread(target=DIPService.warmup_sessions, daemon=True).start()
+    yield
 
 # إنشاء تطبيق FastAPI
 app = FastAPI(
@@ -12,7 +21,8 @@ app = FastAPI(
     description="واجهة برمجة تطبيقات خادم معالجة الصور الرقمية المتطور (OpenCV + NumPy + FastAPI)",
     version="1.0.0",
     docs_url="/docs",
-    redoc_url="/redoc"
+    redoc_url="/redoc",
+    lifespan=lifespan
 )
 
 # إعدادات CORS للسماح لمحرر React (Vite) بالتواصل المباشر مع الخادم

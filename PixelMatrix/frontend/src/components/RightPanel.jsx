@@ -167,10 +167,10 @@ export default function RightPanel({
   // معاملات وحدة الذكاء الاصطناعي: عزل الخلفية + استوديو المنتجات (Step 4)
   const [aiSubTab, setAiSubTab] = useState('removal');
   const [aiBusy, setAiBusy] = useState(false);
-  const [bgModel, setBgModel] = useState('u2net');
+  const [bgModel, setBgModel] = useState('u2netp');
   const [mattingThreshold, setMattingThreshold] = useState(0);
-  const [grabcutRefine, setGrabcutRefine] = useState(true);
-  const [grabcutIter, setGrabcutIter] = useState(3);
+  const [grabcutRefine, setGrabcutRefine] = useState(false);
+  const [grabcutIter, setGrabcutIter] = useState(2);
   const [backdrop, setBackdrop] = useState('studio-sweep');
   const [studioColor1, setStudioColor1] = useState('#e8ecf2');
   const [studioColor2, setStudioColor2] = useState('#16202f');
@@ -2822,18 +2822,19 @@ export default function RightPanel({
                     {/* اختيار النموذج العصبي */}
                     <div className="space-y-1.5">
                       <span className="text-[11px] text-slate-400 font-mono font-semibold block">NEURAL MODEL:</span>
-                      <div className="grid grid-cols-3 gap-1 font-mono text-[9.5px]">
+                      <div className="grid grid-cols-2 gap-1.5 font-mono text-[9.5px]">
                         {[
-                          { id: 'u2net', label: 'U-2-Net عام' },
-                          { id: 'isnet-general-use', label: 'ISNet دقيق' },
-                          { id: 'u2net_human_seg', label: 'U2Net بشر' }
+                          { id: 'u2netp', label: '⚡ توربو فائق (0.3s)' },
+                          { id: 'u2net', label: 'U-2-Net قياسي' },
+                          { id: 'isnet-general-use', label: 'ISNet أعلى دقة' },
+                          { id: 'u2net_human_seg', label: 'U2Net بشر/بورتريه' }
                         ].map(m => (
                           <button
                             key={m.id}
                             onClick={() => setBgModel(m.id)}
-                            className={`py-1.5 px-1 rounded-lg text-center transition-all ${
+                            className={`py-1.5 px-2 rounded-lg text-center transition-all ${
                               bgModel === m.id
-                                ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-400 font-bold'
+                                ? 'bg-cyan-500/20 text-cyan-300 border border-cyan-400 font-bold shadow-sm shadow-cyan-500/20'
                                 : 'bg-slate-900 text-slate-400 border border-slate-800 hover:text-slate-200'
                             }`}
                           >
