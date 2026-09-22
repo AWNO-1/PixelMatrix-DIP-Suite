@@ -1012,8 +1012,21 @@ class DIPService:
         """
         إرجاع جلسة استدلال عصبية مخبأة مسبقاً في الذاكرة (Cached Inference Session)
         لتفادي إعادة قراءة وتحميل شبكة الأوزان من القرص في كل طلب عزل (تسريع فوري > 2x).
+        مع تأمين نسخ ملف النموذج المحلي المرفق في المستودع تلقائياً لتفادي أي تنزيل من الإنترنت.
         """
         if model_name not in cls._AI_SESSIONS:
+            import os, shutil
+            if model_name == "u2netp":
+                local_m = os.path.normpath(os.path.join(os.path.dirname(__file__), "..", "models", "u2netp.onnx"))
+                target_d = os.path.expanduser("~/.rembg/models/u2netp")
+                target_f = os.path.join(target_d, "u2netp.onnx")
+                if os.path.exists(local_m) and not os.path.exists(target_f):
+                    try:
+                        os.makedirs(target_d, exist_ok=True)
+                        shutil.copy2(local_m, target_f)
+                    except Exception:
+                        pass
+
             from rembg import new_session
             cls._AI_SESSIONS[model_name] = new_session(model_name=model_name)
         return cls._AI_SESSIONS[model_name]

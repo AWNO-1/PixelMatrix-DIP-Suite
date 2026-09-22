@@ -10,9 +10,7 @@ __pycache__/
 *$py.class
 *.so
 
-# Build & Bundles
-frontend/dist/
-dist/
+# Build & Bundles (dist is tracked to allow running without Node.js)
 build/
 
 # Logs & Temp

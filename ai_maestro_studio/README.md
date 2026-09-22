@@ -124,11 +124,13 @@ ai_maestro_studio/
 
 ---
 
-## 📄 التقارير الأكاديمية الرسمية المرفقة (Documentation)
-1. **[`AI_Maestro_Suite_Supervisor_Academic_Report.pdf`](AI_Maestro_Suite_Supervisor_Academic_Report.pdf):**
-   * التقرير الهندسي الشامل الموجه للأستاذ القدير م. مالك المصنف (14 صفحة — خالي من صيغ الأسئلة، مفصل للتشريح الخوارزمي لكل آلة، وموثق لجدول الشفافية البرمجية).
-2. **[`AI_Maestro_Suite_Final_Academic_Report.pdf`](AI_Maestro_Suite_Final_Academic_Report.pdf):**
-   * تقرير استيفاء معايير التقييم الستة للحصول على الدرجة الكاملة (Full Mark Rubric) ودليل المناقشة الشامل ومصفوفة الاختبارات المقاسة.
+## 📄 التوثيق والتقارير الأكاديمية المرفقة (Documentation)
+1. **[`AI_Maestro_Suite_User_Manual.pdf`](AI_Maestro_Suite_User_Manual.pdf) | [`USER_MANUAL.md`](USER_MANUAL.md):**
+   * **دليل المستخدم والتشغيل العملي الميداني:** (11 صفحة — مصور بالكامل، يوضح إعدادات الكاميرا والإضاءة، آليات الملاحة بدون لمس، إيماءات المايسترو، كيفية عزف كل آلة، جدول الاختصارات، وحلول المشكلات الشائعة).
+2. **[`AI_Maestro_Suite_Supervisor_Academic_Report.pdf`](AI_Maestro_Suite_Supervisor_Academic_Report.pdf):**
+   * **التقرير الهندسي الشامل للمشرف الأكاديمي:** (14 صفحة — موجه للأستاذ القدير م. مالك المصنف، خالي من صيغ الأسئلة، مفصل للتشريح الخوارزمي لكل آلة، وموثق لجدول الشفافية البرمجية والأصالة).
+3. **[`AI_Maestro_Suite_Final_Academic_Report.pdf`](AI_Maestro_Suite_Final_Academic_Report.pdf):**
+   * **تقرير استيفاء معايير التقييم الستة (Full Mark Rubric):** (13 صفحة — يشمل محاور المزايا، التصميم، التطوير، الأصالة، دليل المناقشة والدفاع الأكاديمي، ومصفوفة الاختبارات المقاسة).
 
 ---
 © 2026 AI Maestro Suite Team. All Rights Reserved.

@@ -49,9 +49,13 @@
 ================================================================================
 - دليل المستخدم التفاعلي لمحرر الصور (PDF):
   PixelMatrix/frontend/public/PixelMatrix_User_Manual.pdf
-- التقرير الأكاديمي الهندسي:
+- التقرير الأكاديمي الهندسي لمحرر الصور:
   PixelMatrix/docs/PixelMatrix_Academic_Report.md
-- التقرير الأكاديمي لمنظومة المايسترو وتتبع الحركة:
+- دليل المستخدم والتشغيل العملي لمنظومة المايسترو والآلات (PDF):
+  ai_maestro_studio/AI_Maestro_Suite_User_Manual.pdf
+- التقرير الهندسي الشامل للمشرف الأكاديمي م. مالك المصنف (PDF):
+  ai_maestro_studio/AI_Maestro_Suite_Supervisor_Academic_Report.pdf
+- تقرير معايير التقييم الستة ودليل المناقشة لمنظومة المايسترو (PDF):
   ai_maestro_studio/AI_Maestro_Suite_Final_Academic_Report.pdf
 
 ================================================================================
