@@ -283,9 +283,9 @@ class ManualPDFBuilder:
         )
 
         members = [
-            ("1. أواب النزيلي (Awwab Al-Nuzaili)", "رئيس الفريق وكبير المطورين: استوديو البوز، نواة الخوارزميات، عزل AI، وتعديل المحرر"),
-            ("2. محمد العواضي (Mohammed Al-Awadhi)", "مهندس النظم ومعمل الحسابات والمزج، تجزئة الألوان، وتشفير LSB"),
-            ("3. مشعل حاجب (Mishaal Hajeb)", "مهندس الواجهات وتجربة المستخدم، الفحص البيومتري ICAO، وتنسيق الأصول")
+            ("1. أواب النزيلي (Awwab Al-Nuzaili)", "رئيس الفريق ومهندس معمارية النواة المكانية (Lead DIP Architect)"),
+            ("2. محمد العواضي (Mohammed Al-Awadhi)", "مهندس العمليات الحسابية والتجزئة الرقمية (Image Operations Lead)"),
+            ("3. مشعل حاجب (Mishaal Hajeb)", "مهندس الفحص البيومتري وتجربة المستخدم (Biometrics & UI/UX Lead)")
         ]
         my = 480
         for m_name, m_role in members:

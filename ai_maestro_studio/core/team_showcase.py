@@ -16,32 +16,32 @@ TEAM_MEMBERS = [
     {
         "name_ar": "أواب النزيلي",
         "name_en": "Awwab Al-Nuzaili",
-        "role_ar": "رئيس الفريق ومطور المايسترو والبوز",
-        "role_en": "Team Leader & Chief Architect",
-        "badge": "TEAM LEADER",
+        "role_ar": "رئيس الفريق ومهندس الرؤية والحركات",
+        "role_en": "Lead CV & Pose Architect",
+        "badge": "LEAD ARCHITECT",
         "color": (255, 215, 0),      # Gold BGR
         "glow": (180, 140, 0),
-        "desc_ar": "تطوير محرك المايسترو والبوز، قيادة الأوركسترا، وهندسة الآلات الافتراضية"
+        "desc_ar": "تتبع مفاصل الجسم، قيادة الأوركسترا، البيانو الهوائي، ولعبة الإيقاع"
     },
     {
         "name_ar": "محمد العواضي",
         "name_en": "Mohammed Al-Awadhi",
-        "role_ar": "مهندس نظم ومعالجة إشارات صوتية",
-        "role_en": "DSP & Audio Specialist",
-        "badge": "DSP SYSTEMS",
+        "role_ar": "مهندس النظم الصوتية ومعالجة الإشارات",
+        "role_en": "Audio Synthesis & DSP Lead",
+        "badge": "DSP LEAD",
         "color": (0, 240, 255),      # Electric Cyan BGR
         "glow": (0, 160, 180),
-        "desc_ar": "المساعدة في إدارة بنك الأصوات الأوركسترالية ومحركات التوليف الترددي"
+        "desc_ar": "محرك FluidSynth الصوتي، العود والجيتار الهوائي، وطقم الطبول"
     },
     {
         "name_ar": "مشعل حاجب",
         "name_en": "Mishaal Hajeb",
-        "role_ar": "مهندس واجهات وتجربة المستخدم",
-        "role_en": "UI/UX & Biometrics Assistant",
-        "badge": "UI/UX DESIGN",
+        "role_ar": "مهندس واجهات التحكم بدون لمس والبيومتركس",
+        "role_en": "Touchless HUD & Biometrics Lead",
+        "badge": "HUD LEAD",
         "color": (255, 100, 220),    # Neon Magenta BGR
         "glow": (180, 50, 160),
-        "desc_ar": "المساعدة في تصميم الواجهة التفاعلية بدون لمس والمؤثرات البصرية"
+        "desc_ar": "واجهة العرض بدون لمس، آلة الكمان الهوائي، ونظام التقييم البيومتري"
     }
 ]
 

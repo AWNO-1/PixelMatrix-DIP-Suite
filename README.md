@@ -9,11 +9,16 @@
 * **المشرف العام وأستاذ المقرر:** الأستاذ القدير / **م. مـــالـــك المصنّـــف** (`Eng. Malek A. Almosanif`)
 
 ## 👥 فريق العمل والتطوير الهندسي (Engineering Team)
-1. **أواب النزيلي (`Awwab Al-Nuzaili`):** **رئيس الفريق وكبير المطورين (Team Leader & Lead Architect)**:
-   - مطور منظومة AI Maestro Studio بالكامل (محرك الرؤية وتتبع وضعيات الجسم واليدين، قيادة الأوركسترا، والآلات الافتراضية الخمس).
-   - مطور استوديو وضعيات الجسم (Pose-Matching Studio) وتطوير وتعديل نواة محرر الصور وخوارزميات كاني وسوبل وعزل AI فائق السرعة.
-2. **محمد العواضي (`Mohammed Al-Awadhi`):** مهندس النظم ومعمل الحسابات والمزج وتجهيز بنك الأصوات (DSP & Systems Specialist).
-3. **مشعل حاجب (`Mishaal Hajeb`):** مهندس الواجهات وتجربة المستخدم ومساعد الفحص البيومتري ICAO والمؤثرات (UI/UX Assistant).
+
+### 🎨 أولاً: مشروع محرر الصور الرقمية (PixelMatrix DIP Studio):
+1. **أواب النزيلي (`Awwab Al-Nuzaili`):** رئيس الفريق ومهندس معمارية النواة المكانية (Lead DIP Architect).
+2. **محمد العواضي (`Mohammed Al-Awadhi`):** مهندس العمليات الحسابية والتجزئة الرقمية (Image Operations Lead).
+3. **مشعل حاجب (`Mishaal Hajeb`):** مهندس الفحص البيومتري وتجربة المستخدم (Biometrics & UI/UX Lead).
+
+### 🎼 ثانياً: مشروع المايسترو والآلات (AI Maestro Studio):
+1. **أواب النزيلي (`Awwab Al-Nuzaili`):** رئيس الفريق ومهندس الرؤية والحركات (Lead CV & Pose Architect).
+2. **محمد العواضي (`Mohammed Al-Awadhi`):** مهندس النظم الصوتية ومعالجة الإشارات (Audio Synthesis & DSP Lead).
+3. **مشعل حاجب (`Mishaal Hajeb`):** مهندس واجهات التحكم بدون لمس والبيومتركس (Touchless HUD & Biometrics Lead).
 
 ---
 
