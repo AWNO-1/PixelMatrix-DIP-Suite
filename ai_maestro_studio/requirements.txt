@@ -1,0 +1,12 @@
+# AI Maestro Studio — Python Dependencies
+# Run: pip install -r requirements.txt
+
+opencv-python>=4.8.0
+mediapipe>=0.10.0
+torch>=2.0.0
+numpy>=1.24.0,<2.0.0
+pillow>=9.5.0
+arabic-reshaper>=3.0.0
+python-bidi>=0.4.2
+pyfluidsynth>=1.3.2
+pygame>=2.5.0
