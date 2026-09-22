@@ -16,32 +16,32 @@ TEAM_MEMBERS = [
     {
         "name_ar": "أواب النزيلي",
         "name_en": "Awwab Al-Nuzaili",
-        "role_ar": "مهندس رؤية حاسوبية ومعالجة صور",
-        "role_en": "Lead Architect & Computer Vision",
-        "badge": "LEAD ARCHITECT",
+        "role_ar": "رئيس الفريق ومطور المايسترو والبوز",
+        "role_en": "Team Leader & Chief Architect",
+        "badge": "TEAM LEADER",
         "color": (255, 215, 0),      # Gold BGR
         "glow": (180, 140, 0),
-        "desc_ar": "هندسة نماذج الذكاء الاصطناعي وهيكلة الرؤية المتعددة المسارات"
+        "desc_ar": "تطوير محرك المايسترو والبوز، قيادة الأوركسترا، وهندسة الآلات الافتراضية"
     },
     {
         "name_ar": "محمد العواضي",
         "name_en": "Mohammed Al-Awadhi",
-        "role_ar": "مهندس نظم ومعالجة إشارات رقمية",
-        "role_en": "Core DSP & Audio Systems Engineer",
-        "badge": "CORE DSP",
+        "role_ar": "مهندس نظم ومعالجة إشارات صوتية",
+        "role_en": "DSP & Audio Specialist",
+        "badge": "DSP SYSTEMS",
         "color": (0, 240, 255),      # Electric Cyan BGR
         "glow": (0, 160, 180),
-        "desc_ar": "محركات التوليف النغمي الحي، التوليف الإجرائي وتزامن الترددات"
+        "desc_ar": "المساعدة في إدارة بنك الأصوات الأوركسترالية ومحركات التوليف الترددي"
     },
     {
         "name_ar": "مشعل حاجب",
         "name_en": "Mishaal Hajeb",
-        "role_ar": "مهندس واجهات تفاعلية وخوارزميات بيومترية",
-        "role_en": "HUD & Biometrics Interaction Engineer",
-        "badge": "HUD & BIOMETRICS",
+        "role_ar": "مهندس واجهات وتجربة المستخدم",
+        "role_en": "UI/UX & Biometrics Assistant",
+        "badge": "UI/UX DESIGN",
         "color": (255, 100, 220),    # Neon Magenta BGR
         "glow": (180, 50, 160),
-        "desc_ar": "أنظمة المؤثرات البصرية وتتبع المفاصل البيومترية فائقة السرعة"
+        "desc_ar": "المساعدة في تصميم الواجهة التفاعلية بدون لمس والمؤثرات البصرية"
     }
 ]
 
