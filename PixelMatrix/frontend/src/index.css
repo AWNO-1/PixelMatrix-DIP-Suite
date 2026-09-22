@@ -1,0 +1,106 @@
+@import "tailwindcss";
+
+@layer base {
+  body {
+    font-family: 'Cairo', 'Inter', system-ui, -apple-system, sans-serif;
+    background-color: #080a0f;
+  }
+  
+  code, pre, .font-mono {
+    font-family: 'JetBrains Mono', monospace;
+  }
+}
+
+/* تخصيص مظهر أشرطة التمرير التقنية Dark Obsidian Scrollbars */
+::-webkit-scrollbar {
+  width: 4px;
+  height: 4px;
+}
+
+::-webkit-scrollbar-track {
+  background: #080a0f;
+}
+
+::-webkit-scrollbar-thumb {
+  background: #1e293b;
+  border-radius: 9999px;
+  border: 1px solid rgba(6, 182, 212, 0.15);
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: #06b6d4;
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.5);
+}
+
+/* شبكة اللوحة النقطية الهندسية Dotted Grid Canvas Pattern */
+.canvas-dotted-grid {
+  background-color: #080a0f;
+  background-image: 
+    radial-gradient(rgba(6, 182, 212, 0.22) 1.2px, transparent 1.2px),
+    linear-gradient(to right, rgba(255, 255, 255, 0.015) 1px, transparent 1px),
+    linear-gradient(to bottom, rgba(255, 255, 255, 0.015) 1px, transparent 1px);
+  background-size: 24px 24px, 120px 120px, 120px 120px;
+  background-position: 0 0, 0 0, 0 0;
+}
+
+/* نمط المربعات الشفافة مع لمسة نيون Checkerboard */
+.canvas-checkerboard {
+  background-color: #0d111a;
+  background-image: 
+    linear-gradient(45deg, #080b12 25%, transparent 25%), 
+    linear-gradient(-45deg, #080b12 25%, transparent 25%), 
+    linear-gradient(45deg, transparent 75%, #080b12 75%), 
+    linear-gradient(-45deg, transparent 75%, #080b12 75%);
+  background-size: 16px 16px;
+  background-position: 0 0, 0 8px, 8px -8px, -8px 0px;
+}
+
+/* اللوحات العائمة الشفافة (Obsidian & Electric Cyan Glassmorphism) */
+.glass-panel {
+  background: rgba(11, 15, 25, 0.72);
+  backdrop-filter: blur(20px);
+  -webkit-backdrop-filter: blur(20px);
+  border: 1px solid rgba(6, 182, 212, 0.15);
+  box-shadow: 0 12px 40px -10px rgba(0, 0, 0, 0.65), 0 0 20px -5px rgba(6, 182, 212, 0.08);
+}
+
+/* شاشات وبيانات HUD التقنية العائمة */
+.glass-hud {
+  background: rgba(8, 12, 20, 0.82);
+  backdrop-filter: blur(16px);
+  -webkit-backdrop-filter: blur(16px);
+  border: 1px solid rgba(6, 182, 212, 0.25);
+  box-shadow: 0 8px 30px rgba(0, 0, 0, 0.7), 0 0 25px rgba(6, 182, 212, 0.12);
+}
+
+/* تأثير التوهج النيوني Electric Cyan Glow */
+.glow-cyan {
+  box-shadow: 0 0 20px rgba(6, 182, 212, 0.35);
+}
+
+.glow-cyan-sm {
+  box-shadow: 0 0 10px rgba(6, 182, 212, 0.25);
+}
+
+.glow-border {
+  border-color: rgba(6, 182, 212, 0.45);
+  box-shadow: 0 0 15px rgba(6, 182, 212, 0.2);
+}
+
+/* شريط تمرير المدى Slider النيوني */
+input[type="range"]::-webkit-slider-thumb {
+  appearance: none;
+  width: 14px;
+  height: 14px;
+  border-radius: 50%;
+  background: #22d3ee;
+  border: 2px solid #080a0f;
+  box-shadow: 0 0 10px #06b6d4;
+  cursor: pointer;
+  transition: transform 0.15s ease, box-shadow 0.15s ease;
+}
+
+input[type="range"]::-webkit-slider-thumb:hover {
+  transform: scale(1.25);
+  box-shadow: 0 0 15px #22d3ee;
+}

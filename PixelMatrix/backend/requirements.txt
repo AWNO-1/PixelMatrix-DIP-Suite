@@ -1,0 +1,9 @@
+fastapi>=0.115.0
+uvicorn>=0.30.0
+opencv-python>=4.10.0
+numpy>=2.0.0
+pillow>=10.4.0
+python-multipart>=0.0.12
+pydantic>=2.8.0
+rembg>=2.0.61
+onnxruntime>=1.19.0

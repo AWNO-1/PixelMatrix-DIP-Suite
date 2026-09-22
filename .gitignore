@@ -1,0 +1,22 @@
+# Dependencies
+node_modules/
+.venv/
+env/
+venv/
+
+# Python cache
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+
+# Build & Bundles
+frontend/dist/
+dist/
+build/
+
+# Logs & Temp
+*.log
+*.tmp
+.DS_Store
+Thumbs.db
