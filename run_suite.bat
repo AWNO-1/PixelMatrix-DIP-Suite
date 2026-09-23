@@ -1,60 +1,60 @@
-﻿@echo off
-chcp 65001 >nul
-title PixelMatrix & AI Maestro Suite - Master Launcher
+@echo off
+setlocal enabledelayedexpansion
+title "PixelMatrix and AI Maestro Suite - Master Launcher"
 cd /d "%~dp0"
 
-:MENU
-cls
-echo ======================================================================
-echo       جامعة إب — كلية الحاسبات والعلوم التطبيقية • قسم علوم الحاسوب
-echo     PixelMatrix Studio & AI Maestro Suite — المنظومة الهندسية الكاملة
-echo              إشراف أستاذ المقرر: م. مالك المصنف
-echo              رئيس الفريق: أواب النزيلي
-echo ======================================================================
-echo.
-echo [1] تشغيل محرر الصور الرقمية المتقدم (PixelMatrix DIP Studio)
-echo [2] تشغيل استوديو المايسترو وتتبع وضعيات الجسم (AI Maestro Studio)
-echo [3] فحص وتثبيت كافة متطلبات وحزم النظام (Install All Dependencies)
-echo [4] فتح دليل المناقشة والدفاع الأكاديمي الشامل (PDF Guide)
-echo [5] فتح الدليل التشغيلي لمحرر الصور (User Manual PDF)
-echo [6] فتح التقرير الأكاديمي الشامل (Academic Report PDF)
-echo [0] خروج
-echo.
-set /p choice="أدخل رقم الخيار المطلوب [0-6]: "
+:: ======================================================================
+:: 1. Dynamic Python Detection
+:: ======================================================================
+set "PYTHON_CMD="
 
-if "%choice%"=="1" (
-    cd /d "%~dp0PixelMatrix"
-    start run_project.bat
-    goto MENU
+if exist "%~dp0.venv\Scripts\python.exe" set "PYTHON_CMD=%~dp0.venv\Scripts\python.exe"
+if not defined PYTHON_CMD if exist "%~dp0ai_maestro_studio\.venv\Scripts\python.exe" set "PYTHON_CMD=%~dp0ai_maestro_studio\.venv\Scripts\python.exe"
+if not defined PYTHON_CMD if exist "%~dp0PixelMatrix\backend\.venv\Scripts\python.exe" set "PYTHON_CMD=%~dp0PixelMatrix\backend\.venv\Scripts\python.exe"
+if not defined PYTHON_CMD if exist "%~dp0conductor-simulator\.venv\Scripts\python.exe" set "PYTHON_CMD=%~dp0conductor-simulator\.venv\Scripts\python.exe"
+
+if not defined PYTHON_CMD (
+    python --version >nul 2>nul
+    if !ERRORLEVEL! EQU 0 set "PYTHON_CMD=python"
 )
-if "%choice%"=="2" (
-    cd /d "%~dp0ai_maestro_studio"
-    start run_studio.bat
-    goto MENU
+
+if not defined PYTHON_CMD (
+    py -3 --version >nul 2>nul
+    if !ERRORLEVEL! EQU 0 set "PYTHON_CMD=py -3"
 )
-if "%choice%"=="3" (
+
+if not defined PYTHON_CMD if exist "%USERPROFILE%\anaconda3\python.exe" set "PYTHON_CMD=%USERPROFILE%\anaconda3\python.exe"
+if not defined PYTHON_CMD if exist "%LOCALAPPDATA%\Programs\Python\Python312\python.exe" set "PYTHON_CMD=%LOCALAPPDATA%\Programs\Python\Python312\python.exe"
+if not defined PYTHON_CMD if exist "%LOCALAPPDATA%\Programs\Python\Python311\python.exe" set "PYTHON_CMD=%LOCALAPPDATA%\Programs\Python\Python311\python.exe"
+if not defined PYTHON_CMD if exist "%LOCALAPPDATA%\Programs\Python\Python310\python.exe" set "PYTHON_CMD=%LOCALAPPDATA%\Programs\Python\Python310\python.exe"
+
+:: ======================================================================
+:: 2. Check if Python is found
+:: ======================================================================
+if not defined PYTHON_CMD (
+    echo ======================================================================
+    echo  [ERROR] Python is not detected on this system!
+    echo ======================================================================
     echo.
-    echo جارٍ تثبيت متطلبات محرر الصور...
-    python -m pip install -r "%~dp0PixelMatrix\backend\requirements.txt"
+    echo  Please install Python 3.10 or newer from:
+    echo  https://www.python.org/downloads/
     echo.
-    echo جارٍ تثبيت متطلبات استوديو المايسترو...
-    python -m pip install -r "%~dp0ai_maestro_studio\requirements.txt"
+    echo  IMPORTANT: Make sure to check "Add python.exe to PATH" during setup!
     echo.
-    echo اكتمل الفحص والتثبيت!
+    echo ======================================================================
+    echo  [Notice] Please install Python 3.10+ to launch the suite.
+    echo ======================================================================
+    echo.
     pause
-    goto MENU
+    exit /b 1
 )
-if "%choice%"=="4" (
-    start "" "%~dp0دليل_المناقشة_والدفاع_الأكاديمي_الشامل.pdf"
-    goto MENU
+
+:: ======================================================================
+:: 3. Launch Master Suite Python App
+:: ======================================================================
+%PYTHON_CMD% "%~dp0master_suite.py"
+if %ERRORLEVEL% NEQ 0 (
+    echo.
+    echo [INFO] Application exited. Press any key to close...
+    pause >nul
 )
-if "%choice%"=="5" (
-    start "" "%~dp0PixelMatrix\docs\PixelMatrix_User_Manual.pdf"
-    goto MENU
-)
-if "%choice%"=="6" (
-    start "" "%~dp0PixelMatrix\docs\PixelMatrix_Academic_Report.pdf"
-    goto MENU
-)
-if "%choice%"=="0" exit /b 0
-goto MENU
